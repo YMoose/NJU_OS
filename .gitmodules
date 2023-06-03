@@ -1,0 +1,3 @@
+[submodule "NJU-os-workbench"]
+	path = NJU-os-workbench
+	url = git@github.com:YMoose/NJU-os-workbench.git

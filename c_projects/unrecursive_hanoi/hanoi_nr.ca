@@ -1,0 +1,31 @@
+# 1 "hanoi_nr.c"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 31 "<command-line>"
+# 1 "/usr/include/stdc-predef.h" 1 3 4
+# 32 "<command-line>" 2
+# 1 "hanoi_nr.c"
+typedef struct {
+  int pc, n;
+  char from, to, via;
+} Frame;
+
+
+
+
+
+void hanoi(int n, char from, char to, char via) {
+  Frame stk[64], *top = stk - 1;
+  ({ *(++top) = (Frame) { .pc = 0, n, from, to, via }; });
+  for (Frame *f; (f = top) >= stk; f->pc++) {
+    n = f->n; from = f->from; to = f->to; via = f->via;
+    switch (f->pc) {
+      case 0: if (n == 1) { printf("%c -> %c\n", from, to); ({ f->pc = (4) - 1; }); } break;
+      case 1: ({ *(++top) = (Frame) { .pc = 0, n - 1, from, via, to }; }); break;
+      case 2: ({ *(++top) = (Frame) { .pc = 0, 1, from, to, via }; }); break;
+      case 3: ({ *(++top) = (Frame) { .pc = 0, n - 1, via, to, from }; }); break;
+      case 4: ({ top--; }); break;
+      default: assert(0);
+    }
+  }
+}
