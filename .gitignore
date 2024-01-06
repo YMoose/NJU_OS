@@ -1,3 +1,5 @@
 .vscode
 os-workbench
-python_env
+python_venv
+**/a.out
+**/*.o

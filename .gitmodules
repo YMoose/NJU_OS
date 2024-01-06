@@ -1,3 +1,6 @@
 [submodule "NJU-os-workbench"]
 	path = NJU-os-workbench
 	url = git@github.com:YMoose/NJU-os-workbench.git
+[submodule "python_playground/mosaic"]
+	path = python_playground/mosaic
+	url = https://github.com/jiangyy/mosaic.git
