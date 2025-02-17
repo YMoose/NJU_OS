@@ -1,0 +1,7 @@
+define hook-quit
+  kill
+end
+
+target remote localhost:1234
+file build/kernel-x86_64-qemu.elf
+b main
